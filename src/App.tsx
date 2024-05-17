@@ -1,20 +1,20 @@
-import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import { HelmetProvider } from 'react-helmet-async';
-import { useMemo } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Education from './pages/Education';
-import Experience from './pages/Experience';
-import Skills from './pages/Skills';
-import Volunteering from './pages/Volunteering';
-import Contact from './pages/Contact';
-import createMyTheme from './theme';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import useColorMode from './hooks/useColorMode';
-import SkipLink from './components/SkipLink';
+import React from "react";
+import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
+import { HelmetProvider } from "react-helmet-async";
+import { useMemo } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Education from "./pages/Education";
+import Experience from "./pages/Experience";
+import Skills from "./pages/Skills";
+import Volunteering from "./pages/Volunteering";
+import Contact from "./pages/Contact";
+import createMyTheme from "./theme";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import useColorMode from "./hooks/useColorMode";
+import SkipLink from "./components/SkipLink";
 
 const App: React.FC = () => {
   const { mode, toggleColorMode } = useColorMode();

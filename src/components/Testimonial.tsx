@@ -1,6 +1,6 @@
-import React from 'react';
-import { Box, Typography, Avatar } from '@mui/material';
-import styled from '@emotion/styled';
+import React from "react";
+import { Box, Typography, Avatar } from "@mui/material";
+import styled from "@emotion/styled";
 
 const TestimonialCard = styled(Box)`
   background: #fff;
@@ -10,7 +10,12 @@ const TestimonialCard = styled(Box)`
   margin: 20px 0;
 `;
 
-const Testimonial: React.FC<{ name: string; title: string; avatar: string; text: string }> = ({ name, title, avatar, text }) => {
+const Testimonial: React.FC<{
+  name: string;
+  title: string;
+  avatar: string;
+  text: string;
+}> = ({ name, title, avatar, text }) => {
   return (
     <TestimonialCard>
       <Box display="flex" alignItems="center" mb={2}>

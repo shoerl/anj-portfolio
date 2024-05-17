@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from "react";
+import { Helmet, HelmetProps } from "react-helmet";
 
 const useSEO = (title: string, description: string) => {
   useEffect(() => {

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, Typography, Box, IconButton } from '@mui/material';
-import styled from '@emotion/styled';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+import React from "react";
+import { Container, Typography, Box, IconButton } from "@mui/material";
+import styled from "@emotion/styled";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const FooterContainer = styled(Box)`
   background-color: #1976d2;
@@ -13,7 +13,7 @@ const FooterContainer = styled(Box)`
 
 interface FooterProps {
   toggleColorMode: () => void;
-  mode: 'light' | 'dark';
+  mode: "light" | "dark";
 }
 
 const Footer: React.FC<FooterProps> = ({ toggleColorMode, mode }) => {
@@ -21,12 +21,19 @@ const Footer: React.FC<FooterProps> = ({ toggleColorMode, mode }) => {
     <FooterContainer>
       <Container>
         <IconButton onClick={toggleColorMode} color="inherit">
-          {mode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
+          {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
         </IconButton>
-        <Typography variant="body1">&copy; {new Date().getFullYear()} Anjali Arvind. All rights reserved.</Typography>
+        <Typography variant="body1">
+          &copy; {new Date().getFullYear()} Anjali Arvind. All rights reserved.
+        </Typography>
         <Typography variant="body2">
-          Connect with me on{' '}
-          <a href="https://www.linkedin.com/in/anjali-arvind" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+          Connect with me on{" "}
+          <a
+            href="https://www.linkedin.com/in/anjali-arvind"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "white" }}
+          >
             LinkedIn
           </a>
         </Typography>

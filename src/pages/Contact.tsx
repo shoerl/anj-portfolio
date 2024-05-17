@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Typography, TextField, Button, Box } from '@mui/material';
+import React from "react";
+import { Container, Typography, TextField, Button, Box } from "@mui/material";
 
 const Contact: React.FC = () => {
   return (
@@ -8,7 +8,9 @@ const Contact: React.FC = () => {
         Contact Me
       </Typography>
       <Typography variant="body1" paragraph>
-        I'm currently open to new opportunities and collaborations. Feel free to reach out if you have any questions or if you would like to discuss potential projects.
+        I'm currently open to new opportunities and collaborations. Feel free to
+        reach out if you have any questions or if you would like to discuss
+        potential projects.
       </Typography>
       <Box component="form" noValidate autoComplete="off">
         <TextField

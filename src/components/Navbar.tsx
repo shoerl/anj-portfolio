@@ -1,7 +1,7 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
-import styled from '@emotion/styled';
+import React from "react";
+import { AppBar, Toolbar, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import styled from "@emotion/styled";
 
 const StyledLink = styled(Link)`
   color: white;
