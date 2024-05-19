@@ -1,8 +1,5 @@
 import React from 'react'
 import { Container, Typography, Box } from '@mui/material'
-import { IconButton } from '@mui/material'
-import LightModeIcon from '@mui/icons-material/LightMode'
-import DarkModeIcon from '@mui/icons-material/DarkMode'
 import styled from '@emotion/styled'
 
 const FooterContainer = styled(Box)`
@@ -16,18 +13,10 @@ const FooterContainer = styled(Box)`
   }
 `
 
-interface FooterProps {
-  toggleColorMode: () => void
-  mode: 'light' | 'dark'
-}
-
-const Footer: React.FC<FooterProps> = ({ toggleColorMode, mode }) => {
+const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <Container>
-        <IconButton onClick={toggleColorMode} color='inherit'>
-          {mode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
-        </IconButton>
         <Typography variant='body1'>
           &copy; {new Date().getFullYear()} Anjali Arvind. All rights reserved.
         </Typography>

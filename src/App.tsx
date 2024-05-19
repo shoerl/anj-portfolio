@@ -23,7 +23,7 @@ const App: React.FC = () => {
           <Route path='/volunteering' element={<Volunteering />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-        <Footer toggleColorMode={toggleColorMode} mode={mode} />
+        <Footer/>
       </Router>
     </HelmetProvider>
   )
