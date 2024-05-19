@@ -1,5 +1,6 @@
 name: Build and Deploy
 
+# Trigger the workflow on push events to the main branch
 on:
   push:
     branches:
@@ -10,23 +11,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the repository to the GitHub Actions runner
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Use Node.js 18.x
+      # Step 2: Setup Node.js environment with Yarn cache enabled
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: '18.x'
           cache: 'yarn'
 
+      # Step 3: Install dependencies using Yarn
       - name: Install dependencies
         run: yarn install
 
-      - name: Build the application
+      # Step 4: Build the application using Yarn
+      - name: Build
         run: yarn build
 
+      # Step 5: Deploy the built application to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+        run: yarn deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Use the GitHub token stored in secrets
