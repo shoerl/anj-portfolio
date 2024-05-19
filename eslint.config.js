@@ -1,21 +1,22 @@
-// eslint.config.js
-const js = require('@eslint/js')
-const prettierConfig = require('eslint-config-prettier')
+import js from '@eslint/js';
+import prettierConfig from 'eslint-config-prettier';
+import typescriptParser from '@typescript-eslint/parser';
+import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 
-module.exports = [
+export default [
   js.configs.recommended,
   prettierConfig,
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
-      parser: require('@typescript-eslint/parser'),
+      parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
     },
     plugins: {
-      '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
+      '@typescript-eslint': typescriptPlugin,
     },
     rules: {
       '@typescript-eslint/no-unused-vars': 'warn',
@@ -23,4 +24,4 @@ module.exports = [
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
-]
+];
