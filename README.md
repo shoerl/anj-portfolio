@@ -41,7 +41,7 @@ Welcome to the repository for Anjali Arvind's professional portfolio website. Th
    ```bash
    git clone https://github.com/yourusername/portfolio-website.git
    cd portfolio-website
-  ```
+   ```
 
 2. **Install the dependencies**:
    ```bash
