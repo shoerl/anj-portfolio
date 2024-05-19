@@ -1,25 +1,25 @@
-import React from "react";
-import { Container, Typography, Box, Grid, Chip } from "@mui/material";
+import React from 'react'
+import { Container, Typography, Box, Grid, Chip } from '@mui/material'
 
 const skills = [
-  "Plasmid Cloning",
-  "ELISA",
-  "Western Blotting",
-  "Protein Purification",
-  "Cell Culture",
-  "Flow Cytometry",
-  "High-Throughput Screening",
-  "Benchling",
-  "AKTA Chromatography",
-  "Molecular Biology Techniques",
-  "Data Analysis",
-  "Scientific Writing",
-];
+  'Plasmid Cloning',
+  'ELISA',
+  'Western Blotting',
+  'Protein Purification',
+  'Cell Culture',
+  'Flow Cytometry',
+  'High-Throughput Screening',
+  'Benchling',
+  'AKTA Chromatography',
+  'Molecular Biology Techniques',
+  'Data Analysis',
+  'Scientific Writing',
+]
 
 const Skills: React.FC = () => {
   return (
     <Container>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant='h4' gutterBottom>
         Technical Skills
       </Typography>
       <Box mt={2}>
@@ -32,7 +32,7 @@ const Skills: React.FC = () => {
         </Grid>
       </Box>
     </Container>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

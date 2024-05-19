@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react'
+import styled from '@emotion/styled'
 
 const SkipLinkStyled = styled.a`
   position: absolute;
@@ -14,10 +14,10 @@ const SkipLinkStyled = styled.a`
   &:focus {
     top: 0;
   }
-`;
+`
 
 const SkipLink: React.FC = () => {
-  return <SkipLinkStyled href="#main">Skip to main content</SkipLinkStyled>;
-};
+  return <SkipLinkStyled href='#main'>Skip to main content</SkipLinkStyled>
+}
 
-export default SkipLink;
+export default SkipLink

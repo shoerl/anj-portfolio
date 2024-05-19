@@ -1,21 +1,21 @@
-import React from "react";
-import { Container, Typography, Box } from "@mui/material";
+import React from 'react'
+import { Container, Typography, Box } from '@mui/material'
 
 const Experience: React.FC = () => {
   return (
     <Container>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant='h4' gutterBottom>
         Professional Experience
       </Typography>
       <Box mt={2}>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant='h5' gutterBottom>
           Lab Manager/Technical Associate I
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
+        <Typography variant='subtitle1' gutterBottom>
           MIT Koch Institute for Integrative Cancer Research | Jul 2023 -
           Present
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant='body1' paragraph>
           At the MIT Koch Institute, I manage a diverse array of projects
           focused on the immunologic and inflammatory mediators of cancer
           progression. I have honed my skills in T-cell activation assays,
@@ -25,13 +25,13 @@ const Experience: React.FC = () => {
         </Typography>
       </Box>
       <Box mt={2}>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant='h5' gutterBottom>
           Research Associate in Structural Biology
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
+        <Typography variant='subtitle1' gutterBottom>
           Beam Therapeutics | Jan 2022 - Dec 2022
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant='body1' paragraph>
           At Beam Therapeutics, I played a critical role in high-throughput
           crystallization screening for novel protein complexes. My work
           involved maintaining and updating lab protocols in Benchling,
@@ -41,13 +41,13 @@ const Experience: React.FC = () => {
         </Typography>
       </Box>
       <Box mt={2}>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant='h5' gutterBottom>
           Biosafety Technical Assistant
         </Typography>
-        <Typography variant="subtitle1" gutterBottom>
+        <Typography variant='subtitle1' gutterBottom>
           Northeastern University | Jul 2020 - Dec 2020
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant='body1' paragraph>
           As a Biosafety Technical Assistant at Northeastern University, I
           trained over 200 lab members in biosafety and blood-borne pathogen
           protocols. My responsibilities included managing biological materials,
@@ -57,7 +57,7 @@ const Experience: React.FC = () => {
         </Typography>
       </Box>
     </Container>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience

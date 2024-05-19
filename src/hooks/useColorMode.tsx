@@ -1,22 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 const useColorMode = () => {
-  const [mode, setMode] = useState<'light' | 'dark'>('light');
+  const [mode, setMode] = useState<'light' | 'dark'>('light')
 
   useEffect(() => {
-    const savedMode = localStorage.getItem('theme') as 'light' | 'dark';
+    const savedMode = localStorage.getItem('theme') as 'light' | 'dark'
     if (savedMode) {
-      setMode(savedMode);
+      setMode(savedMode)
     }
-  }, []);
+  }, [])
 
   const toggleColorMode = () => {
-    const newMode = mode === 'light' ? 'dark' : 'light';
-    setMode(newMode);
-    localStorage.setItem('theme', newMode);
-  };
+    const newMode = mode === 'light' ? 'dark' : 'light'
+    setMode(newMode)
+    localStorage.setItem('theme', newMode)
+  }
 
-  return { mode, toggleColorMode };
-};
+  return { mode, toggleColorMode }
+}
 
-export default useColorMode;
+export default useColorMode
