@@ -9,11 +9,8 @@ import Volunteering from './pages/Volunteering'
 import Contact from './pages/Contact'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import useColorMode from './hooks/useColorMode'
 
 const App: React.FC = () => {
-  const { mode, toggleColorMode } = useColorMode()
-
   return (
     <HelmetProvider>
       <Router>
