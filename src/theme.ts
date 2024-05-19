@@ -1,27 +1,48 @@
 import { createTheme } from "@mui/material/styles";
 
-const getDesignTokens = (mode: "light" | "dark") => ({
+const theme = createTheme({
   palette: {
-    mode,
     primary: {
-      main: "#1976d2",
+      main: "#FF9EC7", // Soft Pink
     },
     secondary: {
-      main: "#dc004e",
+      main: "#3C3C3C", // Dark Gray
     },
-    ...(mode === "dark" && {
-      background: {
-        default: "#121212",
-        paper: "#1d1d1d",
-      },
-    }),
+    background: {
+      default: "#FFFFFF", // White
+    },
+    text: {
+      primary: "#000000", // Black
+      secondary: "#FFFFFF", // White
+    },
   },
-  typography: {
-    fontFamily: "Roboto, Arial, sans-serif",
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#3C3C3C", // Dark Gray
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#D3D3D3", // Light Gray
+          color: "#3C3C3C", // Dark Gray
+          "&:hover": {
+            backgroundColor: "#FF9EC7", // Soft Pink
+          },
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: "#3C3C3C", // Dark Gray
+        },
+      },
+    },
   },
 });
 
-const createMyTheme = (mode: "light" | "dark") =>
-  createTheme(getDesignTokens(mode));
-
-export default createMyTheme;
+export default theme;

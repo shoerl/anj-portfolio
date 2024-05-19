@@ -18,6 +18,11 @@
       "@assets/*": ["src/assets/*"]
     }
   },
-  "include": ["src"],
-  "extends": "./src/tsconfig.paths.json"
+  "ts-node": {
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "ESNext"
+    }
+  },
+  "include": ["src"]
 }

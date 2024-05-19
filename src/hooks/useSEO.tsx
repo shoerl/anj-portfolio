@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
-import { Helmet, HelmetProps } from "react-helmet";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const useSEO = (title: string, description: string) => {
-  useEffect(() => {
-    document.title = title;
-  }, [title]);
+interface SEOProps {
+  title: string;
+  description: string;
+}
 
+const useSEO = ({ title, description }: SEOProps): JSX.Element => {
   return (
     <Helmet>
       <title>{title}</title>
