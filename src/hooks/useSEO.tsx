@@ -6,7 +6,7 @@ interface SEOProps {
   description: string
 }
 
-const useSEO = ({ title, description }: SEOProps): JSX.Element => {
+const useSEO = ({ title, description }: SEOProps) => {
   return (
     <Helmet>
       <title>{title}</title>

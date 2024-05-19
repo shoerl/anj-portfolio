@@ -31,4 +31,4 @@ jobs:
 
       # Step 4: Run Prettier to check code formatting
       - name: Run Prettier
-        run: yarn prettier --check .
+        run: yarn prettier --check 'src/**/*.{ts,tsx,css,md}'

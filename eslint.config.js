@@ -1,6 +1,6 @@
 // eslint.config.js
-const js = require('@eslint/js');
-const prettierConfig = require('eslint-config-prettier');
+const js = require('@eslint/js')
+const prettierConfig = require('eslint-config-prettier')
 
 module.exports = [
   js.configs.recommended,
@@ -23,4 +23,4 @@ module.exports = [
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
-];
+]

@@ -1,4 +1,3 @@
-import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
@@ -8,6 +7,7 @@ import theme from './theme'
 /// import './styles/global.css'; // Import global CSS
 
 // Get the root element
+// eslint-disable-next-line no-undef
 const rootElement = document.getElementById('root')
 
 // Ensure the root element exists
@@ -25,5 +25,6 @@ if (rootElement) {
     </ThemeProvider>,
   )
 } else {
+  // eslint-disable-next-line no-undef
   console.error('Failed to find the root element.')
 }

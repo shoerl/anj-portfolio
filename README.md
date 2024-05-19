@@ -1,6 +1,9 @@
 # Anjali Arvind's Portfolio
 
-Welcome to the repository for Anjali Arvind's professional portfolio website. This project showcases her education, experience, skills, and volunteering work. The website is built using modern web technologies and follows best practices in web development.
+Welcome to the repository for Anjali Arvind's professional portfolio website.
+This project showcases her education, experience, skills, and volunteering work.
+The website is built using modern web technologies and follows best practices in
+web development.
 
 ## Table of Contents
 
@@ -16,12 +19,16 @@ Welcome to the repository for Anjali Arvind's professional portfolio website. Th
 
 ## Features
 
-- **Clean and minimalist design**: A user-friendly interface with a focus on content.
+- **Clean and minimalist design**: A user-friendly interface with a focus on
+  content.
 - **Responsive layout**: Ensures a seamless experience across all devices.
 - **Smooth animations**: Enhances user experience with subtle visual effects.
-- **SEO and accessibility optimized**: Improves search engine visibility and usability for all users.
-- **Detailed project case studies**: Highlights Anjali's contributions and expertise in various research projects.
-- **Integrated testimonials**: Builds credibility with recommendations from peers and mentors.
+- **SEO and accessibility optimized**: Improves search engine visibility and
+  usability for all users.
+- **Detailed project case studies**: Highlights Anjali's contributions and
+  expertise in various research projects.
+- **Integrated testimonials**: Builds credibility with recommendations from
+  peers and mentors.
 - **Dark and light mode toggle**: Provides a customizable viewing experience.
 
 ## Technologies Used
@@ -38,12 +45,14 @@ Welcome to the repository for Anjali Arvind's professional portfolio website. Th
 ## Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/yourusername/portfolio-website.git
    cd portfolio-website
    ```
 
 2. **Install the dependencies**:
+
    ```bash
    npm install
    # or
@@ -57,11 +66,14 @@ Welcome to the repository for Anjali Arvind's professional portfolio website. Th
    yarn dev
    ```
 
-Now, open your browser and navigate to `http://localhost:3000`. You should see your application running. If you make changes to the source code, the browser will automatically refresh the page.
+Now, open your browser and navigate to `http://localhost:3000`. You should see
+your application running. If you make changes to the source code, the browser
+will automatically refresh the page.
 
 ## Project Structure
 
-The project structure is organized based on feature, which means that files related to a specific functionality are grouped together.
+The project structure is organized based on feature, which means that files
+related to a specific functionality are grouped together.
 
 ```plaintext
 src/
@@ -76,11 +88,13 @@ src/
 
 ## Contributing
 
-Contributions are always welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
+Contributions are always welcome! Please read the
+[contribution guidelines](CONTRIBUTING.md) first.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md)
+file for details.
 
 ## Acknowledgements
 
@@ -92,4 +106,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 - [React Router](https://reactrouter.com/)
 - [React Helmet Async](https://github.com/staylor/react-helmet-async)
 - [Vite PWA Plugin](https://github.com/vitejs/vite/tree/main/packages/plugin-pwa)
+
+```
+
 ```
