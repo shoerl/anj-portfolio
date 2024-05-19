@@ -1,37 +1,48 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 
-# Trigger the workflow on push events to the main branch
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository to the GitHub Actions runner
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      # Step 2: Setup Node.js environment with Yarn cache enabled
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '18.x'
           cache: 'yarn'
 
-      # Step 3: Install dependencies using Yarn
       - name: Install dependencies
         run: yarn install
 
-      # Step 4: Build the application using Yarn
-      - name: Build
+      - name: Build the application
         run: yarn build
 
-      # Step 5: Deploy the built application to GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'dist'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
       - name: Deploy to GitHub Pages
-        run: yarn deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Use the GitHub token stored in secrets
+        uses: actions/deploy-pages@v1
