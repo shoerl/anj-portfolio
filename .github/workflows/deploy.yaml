@@ -41,7 +41,7 @@ jobs:
       - name: Deploy to Cloudflare Pages
         run: |
           # Install wrangler globally
-          yarn global add @cloudflare/wrangler
+          yarn global add wrangler --latest
           # Publish the built files to Cloudflare Pages
           wrangler pages publish dist --project-name=my-cloudflare-project --branch main --commit-hash ${{ github.sha }}
         env:
