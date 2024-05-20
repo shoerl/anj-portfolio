@@ -2,13 +2,10 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Button, TextField, Typography, Container } from '@mui/material'
 
-const ContactSection = styled.section`
-  padding: 60px 0;
-`
+const ContactSection = styled.section``
 
 const FormContainer = styled(Container)`
   margin: 0 auto;
-  padding: 20px;
   text-align: left; /* Left-align text within the form container */
 `
 
@@ -44,7 +41,7 @@ const Contact = () => {
           variant='body1'
           component='p'
           gutterBottom
-          style={{ color: '#666' }}
+          style={{ color: '#666', paddingBottom: '10px' }}
         >
           I'm currently open to new opportunities and collaborations. Feel free
           to reach out if you have any questions or if you would like to discuss
