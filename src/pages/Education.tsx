@@ -12,7 +12,7 @@ const Education: React.FC = () => {
           Bachelor of Science in Biochemistry
         </Typography>
         <Typography variant='subtitle1' gutterBottom>
-          Northeastern University | Sep 2017 - May 2021
+          Northeastern University | Sep 2018 - May 2023
         </Typography>
         <Typography variant='body1' paragraph>
           Graduated with honors, focusing on structural biology and

@@ -1,37 +1,26 @@
 import React from 'react'
-import { Container, Typography, Box } from '@mui/material'
+import { Box, Typography, Link } from '@mui/material'
 import styled from '@emotion/styled'
 
 const FooterContainer = styled(Box)`
-  background-color: #1976d2;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   padding: 15px;
   text-align: center;
-
-  @media (min-width: 768px) {
-    padding: 30px;
-  }
 `
 
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      <Container>
-        <Typography variant='body1'>
-          &copy; {new Date().getFullYear()} Anjali Arvind. All rights reserved.
-        </Typography>
-        <Typography variant='body2'>
-          Connect with me on{' '}
-          <a
-            href='https://www.linkedin.com/in/anjali-arvind'
-            target='_blank'
-            rel='noopener noreferrer'
-            style={{ color: 'white' }}
-          >
-            LinkedIn
-          </a>
-        </Typography>
-      </Container>
+      <Typography variant='body2'>
+        © 2024 Anjali Arvind. All rights reserved.
+      </Typography>
+      <Typography variant='body2'>
+        Connect with me on{' '}
+        <Link href='https://www.linkedin.com' color='inherit'>
+          LinkedIn
+        </Link>
+      </Typography>
     </FooterContainer>
   )
 }

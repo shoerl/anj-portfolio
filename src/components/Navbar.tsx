@@ -11,18 +11,22 @@ import {
   Box,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
 
-const StyledLink = styled(Link)`
-  color: white;
+const StyledLink = styled.a`
+  color: #6a6a6a; /* Medium Gray for better contrast */
   text-decoration: none;
   margin: 0 10px;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     margin: 10px 0;
     text-align: center;
   }
+`
+
+const NavbarContainer = styled(AppBar)`
+  background-color: #f5f5dc; /* Very Light Gray for the navbar background */
 `
 
 const Navbar: React.FC = () => {
@@ -58,8 +62,8 @@ const Navbar: React.FC = () => {
           <ListItem
             button
             key={text}
-            component={Link}
-            to={`/${text.toLowerCase()}`}
+            component='a'
+            href={`#${text.toLowerCase()}`}
           >
             <ListItemText primary={text} />
           </ListItem>
@@ -70,7 +74,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <AppBar position='static'>
+      <NavbarContainer position='static'>
         <Toolbar>
           <IconButton
             edge='start'
@@ -81,19 +85,21 @@ const Navbar: React.FC = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6' sx={{ flexGrow: 1 }}>
+          <Typography variant='h6' sx={{ flexGrow: 1, color: '#6A6A6A' }}>
+            {' '}
+            {/* Medium Gray for the title */}
             Anjali Arvind
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-            <StyledLink to='/'>Home</StyledLink>
-            <StyledLink to='/education'>Education</StyledLink>
-            <StyledLink to='/experience'>Experience</StyledLink>
-            <StyledLink to='/skills'>Skills</StyledLink>
-            <StyledLink to='/volunteering'>Volunteering</StyledLink>
-            <StyledLink to='/contact'>Contact</StyledLink>
+            <StyledLink href='#home'>Home</StyledLink>
+            <StyledLink href='#education'>Education</StyledLink>
+            <StyledLink href='#experience'>Experience</StyledLink>
+            <StyledLink href='#skills'>Skills</StyledLink>
+            <StyledLink href='#volunteering'>Volunteering</StyledLink>
+            <StyledLink href='#contact'>Contact</StyledLink>
           </Box>
         </Toolbar>
-      </AppBar>
+      </NavbarContainer>
       <Drawer anchor='left' open={drawerOpen} onClose={toggleDrawer(false)}>
         {drawer}
       </Drawer>
