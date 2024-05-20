@@ -31,4 +31,4 @@ jobs:
 
       # Step 4: Run ESLint to check code quality
       - name: Run ESLint
-        run: yarn lint
+        run: yarn run lint-check
