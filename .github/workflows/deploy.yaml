@@ -43,7 +43,7 @@ jobs:
           # Install wrangler globally
           yarn global add wrangler --latest
           # Publish the built files to Cloudflare Pages
-          wrangler pages publish dist --project-name=my-cloudflare-project --branch main --commit-hash ${{ github.sha }}
+          wrangler pages publish dist --project-name=anj-portfolio --branch main --commit-hash ${{ github.sha }}
         env:
           # Use a secret to store the Cloudflare API token securely
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
