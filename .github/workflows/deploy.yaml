@@ -1,48 +1,49 @@
-name: Deploy to GitHub Pages
+# Name of the GitHub Actions workflow
+name: Deploy to Cloudflare Pages
 
+# Trigger the workflow on push events to the main branch
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - main # Change this to your main branch name if it's different
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
+# Define the jobs for the workflow
 jobs:
-  build:
+  deploy:
+    # Use the latest version of Ubuntu as the runner
     runs-on: ubuntu-latest
 
+    # Steps to execute in the workflow
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          node-version: '18.x'
-          cache: 'yarn'
+          # Fetch only the latest commit to speed up the build process
+          fetch-depth: 1
 
+      # Step 2: Set up the Node.js environment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          # Specify the Node.js version to use
+          node-version: '18'
+
+      # Step 3: Install dependencies using Yarn
       - name: Install dependencies
         run: yarn install
 
-      - name: Build the application
-        run: yarn build
+      # Step 4: Build the project
+      - name: Build the project
+        run: yarn build # Adjust this if your build command is different
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: 'dist'
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+      # Step 5: Deploy to Cloudflare Pages using wrangler
+      - name: Deploy to Cloudflare Pages
+        run: |
+          # Install wrangler globally
+          yarn global add @cloudflare/wrangler
+          # Publish the built files to Cloudflare Pages
+          wrangler pages publish dist --project-name=my-cloudflare-project --branch main --commit-hash ${{ github.sha }}
+        env:
+          # Use a secret to store the Cloudflare API token securely
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
